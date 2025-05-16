@@ -1,0 +1,13 @@
+pkgname=cutefetch
+pkgver=3.0.1
+pkgrel=1
+pkgdesc="Tiny coloured fetch script with cute little animals."
+arch=('any')
+url="https://github.com/cybardev/cutefetch"
+license=('GPL-3.0')
+source=("https://github.com/cybardev/cutefetch/releases/download/v$pkgver/cutefetch")
+sha256sums=('SKIP')
+
+package() {
+  install -Dm755 "$srcdir/cutefetch" "$pkgdir/usr/bin/cutefetch"
+}
